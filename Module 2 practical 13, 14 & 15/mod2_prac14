@@ -1,1 +1,16 @@
 
+data(iris)
+
+iris$Species_binary <- ifelse(iris$Species == "setosa", 1, 0)
+
+iris$Species_binary <- factor(iris$Species_binary)
+
+logistic_model <- glm(Species_binary ~ Petal.Length,
+                      data = iris,
+                      family = binomial)
+
+summary(logistic_model)
+
+predicted_probabilities <- predict(logistic_model, type = "response")
+predicted_probabilities
+
