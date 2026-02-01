@@ -1,1 +1,20 @@
+characters <- read.csv("E:/ANSHRAH/ANSHRAH/ANSHRAH PROJECTS-2/CHARACTERS_DATASET.csv")
+head(characters)
+
+#write.csv(characters,
+#          "CHARACTERS_DATASET_EXPORT.csv",
+ #         row.names = FALSE)
+
+# install.packages("writexl")
+library(writexl)
+
+#write_xlsx(characters,
+#           "CHARACTERS_DATASET.xlsx")
+
+#getwd()
+
+pdf("CHARACTERS_DATASET_SUMMARY.pdf")
+summary(characters)
+dev.off()
+
 
