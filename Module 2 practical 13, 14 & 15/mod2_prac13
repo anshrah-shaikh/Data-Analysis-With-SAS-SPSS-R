@@ -1,1 +1,13 @@
 
+data(mtcars)
+
+linear_model <- lm(mpg ~ wt, data = mtcars)
+
+summary(linear_model)
+
+plot(mtcars$wt, mtcars$mpg,
+     main = "Linear Regression: MPG vs Weight",
+     xlab = "Weight",
+     ylab = "Miles per Gallon")
+abline(linear_model)
+
